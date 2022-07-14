@@ -16,7 +16,7 @@ export const createTarefa = async (descricao,tarefaId) => {
     console.log(dados)
     store.dispatch(setTarefas(dados))
 }
-
+ 
 
 export const updateTarefa = async (id, completa) => {
     const tarefaDoc = doc(db, "tarefas", id);
