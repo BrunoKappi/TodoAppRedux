@@ -1,5 +1,4 @@
 import { combineReducers, createStore } from 'redux'
-
 import tarefas from './reducers/tarefas'
 
 const store = createStore(
@@ -9,11 +8,9 @@ const store = createStore(
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
-
-
 store.subscribe(() => {
     localStorage.setItem("Tarefas", JSON.stringify(store.getState()))            
-    console.log("CHANGED", store.getState() )
+    console.log("Store Changed", store.getState() )    
 })
 
 

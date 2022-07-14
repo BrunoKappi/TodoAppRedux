@@ -1,13 +1,6 @@
-    var initial 
-
-    if (localStorage.getItem("Tarefas")) {
-        var {tarefas : initial = []} = JSON.parse(localStorage.getItem("Tarefas"))                 
-    }else{
-        initial = []
-    }
 
 
-const tarefas = (state = initial, action) => {
+const tarefas = (state = [], action) => {
 switch (action.type) {
     case 'ADD_TAREFA': 
         return state.concat(action.novaTarefa)
